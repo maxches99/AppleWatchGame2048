@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var gameLogic: GameLogic = GameLogic()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Spacer()
+            GameView()
+                .environmentObject(gameLogic)
         }
-        .padding()
     }
 }
 
